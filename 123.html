@@ -1,0 +1,44 @@
+<html><body>
+    
+    <form><p>
+<label>Name
+<input type="text" id="mainText" name="your name" required>
+</label> 
+</p>
+        <p>
+<label>F Name
+<input type="text" id="mainText1" name="fathers name" required>
+</label> 
+</p>
+<p><button id="submitBtn" onclick="submitClick()">submit</button></p>
+
+</form>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAPawAXi-wdiJQ8zs2xn9GRaFPlgtOHP9c",
+    authDomain: "ip18-f2582.firebaseapp.com",
+    databaseURL: "https://ip18-f2582.firebaseio.com",
+    projectId: "ip18-f2582",
+    storageBucket: "ip18-f2582.appspot.com",
+    messagingSenderId: "1076923656822"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script >
+    
+var mainText = document.getElementById("mainText");
+var mainText1 = document.getElementById("mainText1");
+
+var submitBtn = document.getElementById("submitBtn");
+function submitClick()
+{
+    var firebaseRef = firebase.database().ref();
+    var messageText = mainText.value;
+    var messageText1 = mainText1.value;
+   firebaseRef.push().set(messageText);
+ firebaseRef.push().set(messageText1);}</script>
+
+</body></html>

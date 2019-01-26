@@ -1,0 +1,38 @@
+<html>
+    <body>
+<h1 id="Heading" >details</h1>
+<form method="get"  action="thank.html" >
+
+<p>
+<label>Name
+<input type="text" id="mainText" name="your name" required>
+</label> 
+</p>
+
+
+
+
+
+
+<p><button id="submitBtn" onclick="submitClick()">confirm pickup</button></p>
+
+</form>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAQkm8BDg1RFf-JnzGQUqR3ewTQ-I0CSBU",
+    authDomain: "ip2018-e99e1.firebaseapp.com",
+    databaseURL: "https://ip2018-e99e1.firebaseio.com",
+    projectId: "ip2018-e99e1",
+    storageBucket: "ip2018-e99e1.appspot.com",
+    messagingSenderId: "491848543710"
+  };
+  firebase.initializeApp(config);
+</script>
+        <script src="index.js"></script>
+    </body></html>
